@@ -1,3 +1,3 @@
 class Movie < ApplicationRecord
-  has_many :bookmark
+  has_many :bookmarks
 end
