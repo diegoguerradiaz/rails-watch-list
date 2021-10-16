@@ -1,0 +1,12 @@
+<h2>Lists created by users</h2>
+
+<table>
+<tbody>
+<% @lists.each do |list| %>
+<tr>
+ <td> <%= list.name %></td>
+
+</tr>
+<% end %>
+</tbody>
+</table>
