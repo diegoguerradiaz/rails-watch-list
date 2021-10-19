@@ -14,16 +14,16 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    if @lists
+    if @list.save
+      redirect_to @lists, notice: 'list was created'
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def list_params
+    params.require(:list).permit(:name)
   end
 end
-
-# def create
-#     @restaurant = Restaurant.new(restaurant_params)
-
-#     if @restaurant.save
-#       redirect_to @restaurant, notice: 'Restaurant was successfully created.'
-#     else
-#       render :new
-#     end
-#   end
