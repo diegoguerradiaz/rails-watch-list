@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'lists', to: 'lists#index' # index
   get 'lists/:id', to: 'lists#show' # show
   get 'lists/new', to: 'lists#new' # new (form)
-  post 'lists', to: 'lists/create' # new (create the list)
+  post 'lists', to: 'lists#create' # new (create the list)
 end
